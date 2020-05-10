@@ -18,8 +18,4 @@ describe 'Checkboxes', :checkbox do
   it 'Desmarcando com find set false' do
     find('input[value=guardians]').set false
   end
-
-  after(:each) do
-    sleep 3
-  end
 end
