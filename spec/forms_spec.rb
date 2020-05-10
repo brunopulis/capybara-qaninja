@@ -1,5 +1,5 @@
 describe 'Forms' do  
-  it 'Credenciais válidas' do
+  it 'Checa notificação' do
     visit 'https://training-wheels-protocol.herokuapp.com/login'
 
     fill_in 'userId', with: 'stark'
@@ -8,5 +8,7 @@ describe 'Forms' do
     click_button 'Login'
 
     expect(find('#flash').visible?).to be true
+
+    expect(find('#flash')).to have_content 'Olá, Tony Stark. Você acessou a área logada!'
   end
 end
